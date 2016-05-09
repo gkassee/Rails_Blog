@@ -2,11 +2,22 @@
 <html>
 <head>
   <title>RailsBlogAssignment</title>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+		<nav>
+		<div id="site-name"><h1>Grumblr.</h1></div>
+			<ul>
+				<li><%= link_to "HOME", home_index_path%></li>
+				
+				<li><%= link_to "LOG OUT", log_out_path %></li>
+			</ul>
+		</nav>
 
 <%= yield %>
 

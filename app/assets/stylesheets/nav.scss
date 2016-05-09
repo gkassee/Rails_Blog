@@ -1,0 +1,40 @@
+body {
+	margin: 0;
+	font-family: 'Droid Serif', serif;
+	background-image: url(http://art.ngfiles.com/images/370000/370313_audiolion_neon-grid.jpg);
+	background-position: fixed;
+	background-size: 100%;
+	color: white;
+}
+
+nav {
+	font-family: 'Quicksand', sans-serif;
+	background: #FFFFFF;
+	box-shadow: 0px 2px 5px #888888;
+	text-align: right;
+}
+
+ul {
+	list-style: none;
+	display: inline-block;
+}
+
+li {
+	display: inline;
+	padding-right: 30px;
+}
+
+li a {
+	display: inline;
+	text-decoration: none;
+	color: #9B9CA5;
+	font-size: 16px;
+}
+
+#site-name {
+	font-family: 'Monoton', cursive;
+	color: #EF3054;
+	font-size: 2em;
+	text-align: left;
+	display: inline-block;
+}

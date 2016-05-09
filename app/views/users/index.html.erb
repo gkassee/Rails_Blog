@@ -1,6 +1,24 @@
-<% @users.each do |user| %>
+<div id="login-text">
+		<h2>Have an account?</h2>
+			<%= form_tag log_in_path do %>
+				<%= label_tag="Username" %>
+				<br>
+				<%= text_field_tag :name %>
+				<br>
+				<%= label_tag="Password" %>
+				<br>
+				<%= text_field_tag :password %>
+				<br>
+				<%= submit_tag "Log In" %>
+			<% end %>
 
-	<%= link_to user.name, user_path(user) %>
-	<br>
+			<p>No Account? Sign up here.
+			<%= button_to "Create Account", new_user_path, method: :get %> <%#had to tell "button_to" that it needs to get the path#%>
+ 			</p>
+	</div>
 
-<% end %>
+	<div id="login-box">
+	</div>
+
+
+
