@@ -1,11 +1,25 @@
 
 	<h2>Recent Posts:</h2>
 
-	<% @posts.last(10).reverse_each do |post| %>
+	<%= form_for @post do |f| %>
+		<%= f.hidden_field :user_id, :value => current_user.id%>
+		<%= f.label :title %>
+		<br>
+		<%= f.text_field :title %>
+		<br>
+		<%= f.label :body %>
+		<br>
+		<%= f.text_area :body %>
+		<br>
+		<%= f.submit %>
+	<% end %>
+
+
+	<% @posts.last(7).reverse_each do |post| %>
 <div id="home-content">
 	<div class="text">
 		<h3><%= post.title %></h3>
-		<p><%= link_to post.user.name, user_path(post.user_id) %></p>
+		<p><%= post.user_id %></p>
 	</div>
 </div>
 

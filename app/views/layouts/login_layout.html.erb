@@ -9,21 +9,11 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-
-<body>
-		<header>
-
-				<div id="site-name"><h1>Grumblr.</h1></div>
-
-				<div id="nav-links">
-					<ul>
-						<li><%= link_to "HOME", home_index_path%></li>
-						<li><%= link_to "MY PROFILE", user_path(current_user.id) %></li>
-						<li><%= link_to "LOG OUT", log_out_path %></li>
-					</ul>
-				</div>
-				
-		</header>
+<body id="login-body">
+		<nav id="home-nav">
+		<div id="site-name-login"><h1>Grumblr.</h1></div>
+			
+		</nav>
 
 <%= yield %>
 

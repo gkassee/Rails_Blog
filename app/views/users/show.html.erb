@@ -18,8 +18,6 @@
 <h2>Blog Posts:</h2>
 <% @user.posts.reverse_each do |p| %>
 
-		<h3><%= link_to p.title, post_path(@posts.id) %></h3>
-
-		<%= button_to "Edit", edit_post_path, method: :get %>
+		<h3><%= link_to p.title, post_path(p.id) %></h3>
 		<br>
 <% end %>
