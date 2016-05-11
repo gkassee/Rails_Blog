@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
 
 	has_many :posts
 	has_many :comments
+	belongs_to :post
 	
 	scope :frequent_poster, -> { @users = User.all
 		freqs = []

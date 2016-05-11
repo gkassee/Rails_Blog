@@ -18,7 +18,7 @@
 	<% @posts.last(7).reverse_each do |post| %>
 <div id="home-content">
 	<div class="text">
-		<h3><%= post.title %></h3>
+		<h3><%= link_to post.title, post_path(post.id) %></h3>
 		<p><%= post.user_id %></p>
 	</div>
 </div>

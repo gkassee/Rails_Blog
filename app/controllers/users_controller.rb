@@ -15,6 +15,7 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    render :layout => "login_layout.html.erb"
   end
 
 

@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'profile/index'
+
+  get 'profile/show'
+
+  get 'profile/index'
+
   get 'home/index'
   get '/log-in' => 'sessions#new'
   post '/log-in' => 'sessions#create'
