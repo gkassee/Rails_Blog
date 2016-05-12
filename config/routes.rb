@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'profile/index'
 
   get 'home/index'
+  
   get '/log-in' => 'sessions#new'
   post '/log-in' => 'sessions#create'
   get '/log-out' => 'sessions#destroy'
@@ -17,6 +18,8 @@ Rails.application.routes.draw do
   end
 
   resources :users
+
+  resources :comments, only: [:create, :destroy]
   
   root "users#index"
   # The priority is based upon order of creation: first created -> highest priority.

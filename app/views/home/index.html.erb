@@ -1,5 +1,6 @@
 
-	<h2>Recent Posts:</h2>
+	<div id="poster">
+	<h3>Hey, <%= current_user.name %>! What's on your mind?</h3>
 
 	<%= form_for @post do |f| %>
 		<%= f.hidden_field :user_id, :value => current_user.id%>
@@ -13,14 +14,16 @@
 		<br>
 		<%= f.submit %>
 	<% end %>
-
-
-	<% @posts.last(7).reverse_each do |post| %>
-<div id="home-content">
-	<div class="text">
-		<h3><%= link_to post.title, post_path(post.id) %></h3>
-		<p><%= post.user_id %></p>
-	</div>
 </div>
 
+<div id="home-content">
+	<% @posts.last(7).reverse_each do |post| %>
+
+	<div class="text">
+		<h3><%= link_to post.title, post_path(post.id) %></h3>
+		<p><%= post.user %></p>
+		<p><%= post.user.name %></p>
+	</div>
+
 	<% end %>
+</div>
