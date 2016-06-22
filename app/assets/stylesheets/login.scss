@@ -1,24 +1,53 @@
 #login-body {
+	background: #5D4A60;
 	font-family: 'Droid Serif', serif;
-	background-image: url(http://art.ngfiles.com/images/370000/370313_audiolion_neon-grid.jpg);
+	background-image: url(http://www.tarva.fi/images/bw-geometric-bg2.jpg);
 	background-position: fixed;
 	background-size: 100%;
 	color: white;
 	z-index: -1;
 }
 
+
+/*#login-wrapper {
+	min-width: 1100px;
+	overflow: auto;
+}*/
+
 #login-header {
 	font-family: 'Quicksand', sans-serif;
-	background: #FFFFFF;
-	box-shadow: 0px 2px 5px #888888;
+	/*background: #FFFFFF;*/
+	/*box-shadow: 0px 2px 5px black;*/
 	height: 120px;
 	min-width: 1000px;
+	text-align: center;
 }
+
 
 #site-name-login {
 	font-family: 'Monoton', cursive;
 	color: #EF3054;
-	font-size: 5em;
-	width: 485px;
+	font-size: 6em;
+	/*width: 390px;*/
+	/*margin: 0 auto;*/
+	padding-top: 10px;
+}
+
+#login-box {
 	margin: 0 auto;
+	margin-top: 5%;
+	width: 500px;
+	height: 350px;
+	background: black;
+	opacity: 0.4;
+	border-radius: 10px;
+}
+
+#login-text {
+	left: 38%;
+	margin-top: 6%;
+	width: 265px;
+	z-index: 2;
+	font-size: 20px;
+	position: absolute;
 }

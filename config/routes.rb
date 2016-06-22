@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   post '/log-in' => 'sessions#create'
   get '/log-out' => 'sessions#destroy'
 
+
   resources :sessions, only: [:create, :destroy, :new]
   resources :posts do
     resources :comments, only: [:create, :destroy]
@@ -19,7 +20,8 @@ Rails.application.routes.draw do
 
   resources :users
 
-  resources :comments, only: [:create, :destroy]
+  resources :comments
+  # , only: [:create, :destroy]
   
   root "users#index"
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,9 +1,11 @@
 class PostsController < ApplicationController
 
+
+
   def new
     @post = Post.new
   end
-  
+
   def create
   	@post = Post.new(post_params)
     if @post.save
@@ -13,9 +15,11 @@ class PostsController < ApplicationController
   	end
   end
 
+
+
   def edit
     @post = Post.find(params[:id])
-  end
+  end 
 
   def update
     @post = Post.find(params[:id])
@@ -24,10 +28,22 @@ class PostsController < ApplicationController
     redirect_to post_path(params[:id])
   end
 
-  def destroy
+
+
+  def delete
+    @post = Post.find(params[:id])
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to user_path(current_user.id)
+  end
+
+
+
   def index
+
   end
 
   def show
@@ -35,6 +51,8 @@ class PostsController < ApplicationController
     @comment = Comment.new
     @comments = Post.find(params[:id]).comments
   end
+
+
 
 private
 

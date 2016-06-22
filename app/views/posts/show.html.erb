@@ -5,14 +5,17 @@
 	<%= f.hidden_field :post_id, :value => @post.id %>
 	<%= f.hidden_field :user_id, :value => current_user.id %>
 
-	<%= f.label :body %>
+	<%= f.label :Comment %>
 	<br>
 	<%= f.text_area :body %>
 	<br>
 	<%= f.submit %>
 <% end %>
 
-<%= button_to "Edit", edit_post_path, method: :get %>
+<% if @post.user_id == current_user.id %>
+	<%= button_to "Edit", edit_post_path, method: :get %>
+	<%= button_to "Delete Post", post_path(@post), method: :delete %>
+<% end %>
 
 <% @comments.reverse_each do |c| %>
 	<p>
@@ -21,5 +24,10 @@
 	By: <%= c.user.name %>
 	</p>
 	<br>
+
+<% if c.user_id == current_user.id %>
+	<%= link_to "Edit Comment", edit_comment_path(c.id) %>
+	<br>
+<% end %>
 
 <% end %>

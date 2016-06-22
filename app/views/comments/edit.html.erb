@@ -1,0 +1,9 @@
+<%= form_for @comment do |f| %>
+	<%= f.label :Body %>
+	<%= f.text_area :body %>
+	<br>
+	<%= f.submit "Save Changes" %>
+<% end %>
+<br>
+<br>
+<%= button_to "Delete Comment", comment_path(@comment), method: :delete %>
