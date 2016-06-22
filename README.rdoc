@@ -1,4 +1,8 @@
-== README
+Rails_Blog README
+
+This project is an example of using Ruby on Rails to build a simple blogging platform that allows users to make an account login and logout, create a post and comment on a post. 
+
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
